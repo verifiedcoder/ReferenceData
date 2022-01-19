@@ -7,4 +7,4 @@ The sample provided in this repository provides a means of making the source of 
 
 It allows the developer to utilise strongly typed access to reference data throughout an application, from the data through to the presentation layer.
 
-Some static helper and extension methodss are provided to make this process seamless. Run the project to observe how that is achieved.
+Some static helper and extension methods are provided to make this process seamless. Run the project to observe how that is achieved.
