@@ -47,7 +47,7 @@ public static class ReferenceDataConverter
     /// <typeparam name="TEntity">The type 'TEntity' of the reference data entity.</typeparam>
     /// <param name="source">The source entity.</param>
     /// <returns>'TEnum' as the target reference data enum.</returns>
-    public static TEnum ConvertReferenceDataEntityToEnum<TEnum, TEntity>(TEntity source)
+    public static TEnum ConvertReferenceDataEntityToEnum<TEntity, TEnum>(TEntity source)
         where TEnum : Enum
         where TEntity : ReferenceDataEntity, new()
     {
