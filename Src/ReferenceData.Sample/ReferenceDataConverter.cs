@@ -1,4 +1,5 @@
-﻿using ReferenceData.Sample.Entities.ReferenceData;
+﻿using Microsoft.Toolkit.Diagnostics;
+using ReferenceData.Sample.Entities.ReferenceData;
 using ReferenceData.Sample.Extensions;
 
 namespace ReferenceData.Sample;
@@ -51,6 +52,8 @@ public static class ReferenceDataConverter
         where TEnum : Enum
         where TEntity : ReferenceDataEntity, new()
     {
+        Guard.IsNotNull(source, nameof(source));
+
         try
         {
             return EnumExtensions.GetEnumValueFromDescription<TEnum>(source.Description);
