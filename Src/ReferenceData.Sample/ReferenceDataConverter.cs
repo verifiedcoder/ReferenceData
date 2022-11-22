@@ -1,4 +1,4 @@
-﻿using Microsoft.Toolkit.Diagnostics;
+﻿using CommunityToolkit.Diagnostics;
 using ReferenceData.Sample.Entities.ReferenceData;
 using ReferenceData.Sample.Extensions;
 
