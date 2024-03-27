@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ReferenceData.Sample.Entities.ReferenceData;
 
 namespace ReferenceData.Sample;
 

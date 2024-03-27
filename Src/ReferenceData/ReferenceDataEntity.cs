@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace ReferenceData.Sample.Entities.ReferenceData;
+namespace ReferenceData;
 
 /// <summary>
 ///     <para>Provides properties applicable to all reference data entities.</para>
