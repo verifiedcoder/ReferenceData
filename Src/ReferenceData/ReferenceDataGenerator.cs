@@ -1,7 +1,4 @@
-﻿using ReferenceData.Sample.Entities.ReferenceData;
-using ReferenceData.Sample.Extensions;
-
-namespace ReferenceData.Sample;
+﻿namespace ReferenceData;
 
 /// <summary>
 ///     Provides a concise and consistent method of generating static reference data.

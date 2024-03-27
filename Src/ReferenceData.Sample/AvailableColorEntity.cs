@@ -1,4 +1,4 @@
-﻿namespace ReferenceData.Sample.Entities.ReferenceData;
+﻿namespace ReferenceData.Sample;
 
 /// <summary>
 ///     <para>Represents a particular set of reference data, here available colors.</para>

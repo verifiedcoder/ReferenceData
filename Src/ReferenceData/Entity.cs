@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace ReferenceData.Sample.Entities;
+namespace ReferenceData;
 
 /// <summary>
 ///     Base class for all data entities.

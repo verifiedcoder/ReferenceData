@@ -1,9 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using ReferenceData;
 using ReferenceData.Sample;
-using ReferenceData.Sample.Entities.ReferenceData;
-using ReferenceData.Sample.Enums;
-using ReferenceData.Sample.Extensions;
 
 var sp = new ServiceCollection().AddDbContext<ReferenceDataContext>(options => options.UseInMemoryDatabase("ReferenceDataSample"))
                                 .BuildServiceProvider();

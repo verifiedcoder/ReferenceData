@@ -1,7 +1,4 @@
-﻿using ReferenceData.Sample.Entities.ReferenceData;
-using ReferenceData.Sample.Enums;
-
-namespace ReferenceData.Sample;
+﻿namespace ReferenceData.Sample;
 
 public static class ReferenceData
 {

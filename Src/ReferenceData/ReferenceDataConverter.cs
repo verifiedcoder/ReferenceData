@@ -1,8 +1,6 @@
 ﻿using CommunityToolkit.Diagnostics;
-using ReferenceData.Sample.Entities.ReferenceData;
-using ReferenceData.Sample.Extensions;
 
-namespace ReferenceData.Sample;
+namespace ReferenceData;
 
 /// <summary>
 ///     Helper methods to convert between reference data and their Enum counterparts.
@@ -48,20 +46,14 @@ public static class ReferenceDataConverter
     /// <typeparam name="TEntity">The type 'TEntity' of the reference data entity.</typeparam>
     /// <param name="source">The source entity.</param>
     /// <returns>'TEnum' as the target reference data enum.</returns>
-    public static TEnum ConvertReferenceDataEntityToEnum<TEntity, TEnum>(TEntity source)
+    public static TEnum? ConvertReferenceDataEntityToEnum<TEntity, TEnum>(TEntity source)
         where TEnum : Enum
         where TEntity : ReferenceDataEntity, new()
     {
         Guard.IsNotNull(source, nameof(source));
 
-        try
-        {
-            return EnumExtensions.GetEnumValueFromDescription<TEnum>(source.Description);
-        }
-        // Normally, log a warning.
-        catch (ArgumentException)
-        {
-            return (TEnum)Activator.CreateInstance(typeof(TEnum))!;
-        }
+        var enumValueFound = EnumExtensions.TryGetEnumValueFromDescription<TEnum>(source.Description, out var enumValue);
+
+        return enumValueFound ? enumValue : default;
     }
 }
