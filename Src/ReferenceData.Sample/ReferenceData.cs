@@ -3,8 +3,8 @@
 public static class ReferenceData
 {
     /// <summary>
-    ///     Gets strongly typed reference data of the specified enumeration.
+    ///     Gets strongly typed reference data for the specified enumeration.
     /// </summary>
-    /// <remarks>The method name should reflect the intended destination table name for this set of reference data.</remarks>
+    /// <remarks>The property name should reflect the intended destination table name for this set of reference data.</remarks>
     public static IEnumerable<AvailableColorEntity> AvailableColors => ReferenceDataGenerator.GetReferenceDataFor<AvailableColor, AvailableColorEntity>();
 }

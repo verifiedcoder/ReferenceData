@@ -10,11 +10,11 @@ public static class ReferenceDataGenerator
     /// </summary>
     /// <typeparam name="TEnum">The Enum.</typeparam>
     /// <typeparam name="TReferenceDataEntity">The type of the reference data entity.</typeparam>
-    /// <returns>A concrete reference data instance matching the specified Enum.</returns>
+    /// <returns>A collection of concrete reference data instances matching the specified Enum.</returns>
     public static IEnumerable<TReferenceDataEntity> GetReferenceDataFor<TEnum, TReferenceDataEntity>()
         where TReferenceDataEntity : ReferenceDataEntity, new()
         where TEnum : Enum
-        => from enumValue in (TEnum[])Enum.GetValues(typeof(TEnum))
+        => from TEnum enumValue in Enum.GetValues(typeof(TEnum))
            select new TReferenceDataEntity
            {
                Id = enumValue.GetValue(),
